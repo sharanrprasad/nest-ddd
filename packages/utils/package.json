@@ -1,0 +1,14 @@
+{
+  "name": "@repo/utils",
+  "main": "dist/src/index.js",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "clean": "rm -rf .turbo dist"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "*"
+  }
+}
