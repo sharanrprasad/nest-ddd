@@ -8,7 +8,7 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "typecheck": "turbo run typecheck",
-    "library:dev": "turbo dev --filter=library-app..."
+    "library:dev": "turbo dev --filter=library..."
   },
   "devDependencies": {
     "eslint": "^8.55.0",
