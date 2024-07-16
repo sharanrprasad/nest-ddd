@@ -4,7 +4,7 @@
   "private": true,
   "license": "MIT",
   "files": [
-    "node/nest.app.js",
+    "node/jest-preset.js",
     "node/jest-preset.js"
   ],
   "devDependencies": {
