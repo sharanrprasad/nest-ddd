@@ -1,6 +1,6 @@
 const { resolve } = require('node:path');
 
-const project = resolve(process.cwd(), 'tsconfig.json');
+const project = resolve(process.cwd(), 'tsconfig.app.json');
 
 module.exports = {
   parser: '@typescript-eslint/parser',
@@ -26,5 +26,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-var-requires': 'off'
   },
 };

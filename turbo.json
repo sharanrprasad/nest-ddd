@@ -9,6 +9,13 @@
         "dist/**"
       ]
     },
+    "nest:build": {
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "dependsOn": ["^build"],
+      "outputs": [
+        "dist/**"
+      ]
+    },
     "test": {
       "outputs": ["coverage/**"],
       "dependsOn": ["^build"]

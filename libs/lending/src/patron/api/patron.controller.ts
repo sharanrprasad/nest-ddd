@@ -1,6 +1,6 @@
 import { Body, Controller, Param, Post, ParseUUIDPipe } from '@nestjs/common';
 import { PatronService } from '../application/patron.service';
-import { PlaceBookOnHoldDto } from '../models/patron.dto.models';
+import { PlaceBookOnHoldDto } from '../models/patron.dto';
 
 @Controller('profiles')
 export class PatronController {
