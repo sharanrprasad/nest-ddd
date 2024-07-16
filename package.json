@@ -3,7 +3,7 @@
   "scripts": {
     "build": "turbo run build",
     "build:library": "nest build library",
-    "start:library:dev": "nest start library --debug --watch",
+    "start:library:dev": "turbo run build --filter=@repo/utils && nest start library --debug --watch",
     "clean": "rm -rf .turbo dist && turbo run clean",
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",

@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "",
   "author": "",
-  "private": true,
   "license": "UNLICENSED",
+
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "dev": "nest start lending --watch",

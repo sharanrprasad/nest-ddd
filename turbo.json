@@ -33,6 +33,9 @@
     },
     "clean": {
       "cache": false
+    },
+    "//#start:library:dev:root": {
+      "dependsOn": ["^build"]
     }
   }
 }

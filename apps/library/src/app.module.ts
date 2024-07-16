@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { PatronModule } from '@repo/lending';
+import { PatronModule } from 'libs/lending/src';
 
 @Module({
   imports: [PatronModule],

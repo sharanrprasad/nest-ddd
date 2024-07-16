@@ -19,12 +19,8 @@
     "strictNullChecks": true,
     "baseUrl": "./",
     "paths": {
-      "@repo/lending": [
-        "libs/lending/src"
-      ],
-      "@repo/lending/*": [
-        "libs/lending/src/*"
-      ]
+      "apps/*": ["./apps/*"],
+      "libs/*": ["./libs/*"]
     }
   }
 }
