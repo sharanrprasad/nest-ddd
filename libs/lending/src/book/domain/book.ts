@@ -9,7 +9,7 @@ export class AvailableBook extends Book {
   constructor(
     public bookId: string,
     public version: number,
-    public branch: string,
+    public libraryBranchId: string,
   ) {
     super(bookId, version);
   }

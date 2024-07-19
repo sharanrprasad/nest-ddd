@@ -1,8 +1,13 @@
-import { BookDbEntity, BookState } from '../infrastructure/book.db.entity';
+import { BookDbEntity, BookState, BookType } from '../models/book.db.entity';
 import { AvailableBook, OnHoldBook } from './book';
 
 export class BookFactory {
-  static toBookDomainModel(bookDbEntity: BookDbEntity) {
+  static toBookDomainModel(bookDbEntity: {
+    availableAtBranch: string;
+    bookId: string;
+    bookState: BookState;
+    bookType: BookType;
+  }) {
     if (bookDbEntity.bookId) {
       return bookDbEntity.bookState === BookState.Available
         ? BookFactory.toAvailableBookDomainModel(bookDbEntity)
@@ -12,7 +17,10 @@ export class BookFactory {
   }
 
   static toAvailableBookDomainModel(bookDbEntity: BookDbEntity): AvailableBook {
-    if (bookDbEntity.availableAtBranch) {
+    if (
+      bookDbEntity.bookState === BookState.Available &&
+      bookDbEntity.availableAtBranch
+    ) {
       return new AvailableBook(
         bookDbEntity.bookId,
         bookDbEntity.version,
