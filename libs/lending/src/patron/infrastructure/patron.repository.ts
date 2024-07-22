@@ -18,11 +18,12 @@ export class PatronRepository {
     if (event instanceof BookHoldSuccessEvent) {
       return this.handleBookHoldSuccessEvent(event);
     }
-
     throw new Error('Not recognised event');
   }
 
   async handleBookHoldSuccessEvent(bookHoldSuccessEvent: BookHoldSuccessEvent) {
-    this.domainEventBus.publish(bookHoldSuccessEvent);
+    // Event publish doesn't return any value.
+    // More info on domain events here - https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/domain-events-design-implementation
+    return this.domainEventBus.publish(bookHoldSuccessEvent);
   }
 }

@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { PatronModule } from 'libs/lending/src';
+import { PatronModule, BookModule } from 'libs/lending/src';
 
 @Module({
-  imports: [PatronModule],
+  imports: [PatronModule, BookModule],
 })
 export class AppModule {}

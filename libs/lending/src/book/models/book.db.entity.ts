@@ -11,8 +11,8 @@ export interface BookDbEntity {
   bookId: string;
   bookType: BookType;
   bookState: BookState;
-  availableAtBranch: string | null;
-  onHoldAtBranch: string | null;
-  onHoldByPatron: string | null;
+  availableAtBranch?: string;
+  onHoldAtBranch?: string;
+  onHoldByPatron?: string;
   version: number;
 }

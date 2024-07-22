@@ -28,7 +28,7 @@ export class Patron {
     throw new Error('failed');
   }
 
-  canHold(book: Book, duration?: number): boolean {
+  canHold(book: AvailableBook, duration?: number): boolean {
     return this.patronPolicies.every(
       (policy) => policy(book, this, duration) instanceof Acceptance,
     );

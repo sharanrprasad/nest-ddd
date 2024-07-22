@@ -8,16 +8,19 @@ export class PatronController {
   constructor(private readonly lendingFacade: LendingFacade) {}
 
   @Post(':patronId/hold')
-  placeBookOnHold(
+  async placeBookOnHold(
     @Param('patronId', ParseUUIDPipe) patronId: string,
     @Body() placeBookOnHold: PlaceBookOnHoldDto,
   ) {
-    return this.lendingFacade.placeBookOnHold(
+    const result = await this.lendingFacade.placeBookOnHold(
       new PlaceBookOnHoldCommand(
         placeBookOnHold.bookId,
         patronId,
         placeBookOnHold.numberOfDays,
       ),
     );
+
+    console.log(result);
+    return result;
   }
 }

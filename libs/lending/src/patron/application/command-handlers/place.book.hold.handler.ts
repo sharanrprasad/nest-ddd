@@ -20,6 +20,8 @@ export class PlaceBookOnHoldCommandHandler
     if (!patron) {
       throw new Error(`Cannot find patron with id ${command.patronId}`);
     }
-    const events = patron.placeOnHold(book, command.numberOfDays);
+    const result = patron.placeOnHold(book, command.numberOfDays);
+    console.log('patron domain events', result);
+    return await this.patronRepository.handleEvents(result);
   }
 }

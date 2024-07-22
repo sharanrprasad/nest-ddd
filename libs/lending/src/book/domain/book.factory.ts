@@ -2,12 +2,7 @@ import { BookDbEntity, BookState, BookType } from '../models/book.db.entity';
 import { AvailableBook, OnHoldBook } from './book';
 
 export class BookFactory {
-  static toBookDomainModel(bookDbEntity: {
-    availableAtBranch: string;
-    bookId: string;
-    bookState: BookState;
-    bookType: BookType;
-  }) {
+  static toBookDomainModel(bookDbEntity: BookDbEntity) {
     if (bookDbEntity.bookId) {
       return bookDbEntity.bookState === BookState.Available
         ? BookFactory.toAvailableBookDomainModel(bookDbEntity)

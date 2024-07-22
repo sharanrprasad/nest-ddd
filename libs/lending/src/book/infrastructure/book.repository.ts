@@ -21,6 +21,7 @@ export class BookRepository implements FindBookById {
       bookState: BookState.Available,
       bookType: BookType.Circulating,
       availableAtBranch: 'Otara',
+      version: 1,
     });
     if (book && book instanceof AvailableBook) {
       return book;
@@ -36,6 +37,7 @@ export class BookRepository implements FindBookById {
       bookState: BookState.Available,
       bookType: BookType.Circulating,
       availableAtBranch: 'Otara',
+      version: 1,
     });
   }
 
