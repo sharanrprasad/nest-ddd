@@ -1,8 +1,8 @@
-import { PatronType } from 'libs/lending/src/patron/infrastructure/models/patron.db.entity';
-import { PatronInformation } from 'libs/lending/src/patron/domain/value-objects/patron.information';
+import { PatronType } from '../../patron/infrastructure/models/patron.db.entity';
+import { PatronInformation } from './value-objects/patron.information';
 import { PatronHolds } from './value-objects/patron.holds';
-import { Patron } from 'libs/lending/src/patron/domain/patron';
-import { PlaceOnHoldPolicy } from 'libs/lending/src/patron/domain/policies/place.on.hold.policy';
+import { Patron } from './patron';
+import { PlaceOnHoldPolicy } from './policies/place.on.hold.policy';
 
 export class PatronFactory {
   static toDomainModel(

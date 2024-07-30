@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { Patron } from 'libs/lending/src/patron/domain/patron';
-import { PatronFactory } from 'libs/lending/src/patron/domain/patron.factory';
-import { PatronType } from 'libs/lending/src/patron/infrastructure/models/patron.db.entity';
-import { PatronEvent } from 'libs/lending/src/patron/domain/events/patron.event';
-import { BookHoldSuccessEvent } from 'libs/lending/src/patron/domain/events/book.hold.success.event';
-import { DomainEventBus } from 'libs/lending/src/shared/domain.event.bus';
+import { Patron } from '../../patron/domain/patron';
+import { PatronFactory } from '../../patron/domain/patron.factory';
+import { PatronType } from '../../patron/infrastructure/models/patron.db.entity';
+import { PatronEvent } from '../../patron/domain/events/patron.event';
+import { BookHoldSuccessEvent } from '../../patron/domain/events/book.hold.success.event';
+import { DomainEventBus } from '../../shared/domain.event.bus';
 
 @Injectable()
 export class PatronRepository {

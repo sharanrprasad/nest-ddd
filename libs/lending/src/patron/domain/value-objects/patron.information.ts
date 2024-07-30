@@ -1,4 +1,4 @@
-import { PatronType } from 'libs/lending/src/patron/infrastructure/models/patron.db.entity';
+import { PatronType } from '../../../patron/infrastructure/models/patron.db.entity';
 
 export class PatronInformation {
   constructor(

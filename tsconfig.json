@@ -18,9 +18,20 @@
     "noFallthroughCasesInSwitch": false,
     "strictNullChecks": true,
     "baseUrl": "./",
+    "esModuleInterop": true,
     "paths": {
-      "apps/*": ["./apps/*"],
-      "libs/*": ["./libs/*"]
+      "@repo/lending": [
+        "libs/lending/src"
+      ],
+      "@repo/lending/*": [
+        "libs/lending/src/*"
+      ],
+      "@repo/shared": [
+        "libs/shared/src"
+      ],
+      "@repo/shared/*": [
+        "libs/shared/src/*"
+      ]
     }
   }
 }

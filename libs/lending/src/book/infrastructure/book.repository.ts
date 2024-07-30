@@ -1,15 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { FindBookById } from 'libs/lending/src/book/models/find.book.by.id';
-import {
-  AvailableBook,
-  Book,
-  OnHoldBook,
-} from 'libs/lending/src/book/domain/book';
-import { BookFactory } from 'libs/lending/src/book/domain/book.factory';
-import {
-  BookState,
-  BookType,
-} from 'libs/lending/src/book/models/book.db.entity';
+import { FindBookById } from '../models/find.book.by.id';
+import { AvailableBook, Book, OnHoldBook } from '../../book/domain/book';
+import { BookFactory } from '../../book/domain/book.factory';
+import { BookState, BookType } from '../../book/models/book.db.entity';
 
 @Injectable()
 export class BookRepository implements FindBookById {

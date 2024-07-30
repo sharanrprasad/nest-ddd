@@ -1,4 +1,4 @@
-import { BookDbEntity, BookState, BookType } from '../models/book.db.entity';
+import { BookDbEntity, BookState } from '../models/book.db.entity';
 import { AvailableBook, OnHoldBook } from './book';
 
 export class BookFactory {

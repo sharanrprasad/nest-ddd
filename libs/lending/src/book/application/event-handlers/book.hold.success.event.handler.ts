@@ -1,7 +1,7 @@
 import { EventsHandler, IEventHandler } from '@nestjs/cqrs';
-import { BookHoldSuccessEvent } from 'libs/lending/src/patron/domain/events/book.hold.success.event';
-import { BookRepository } from 'libs/lending/src/book/infrastructure/book.repository';
-import { AvailableBook, Book } from 'libs/lending/src/book/domain/book';
+import { BookHoldSuccessEvent } from '../../../patron/domain/events/book.hold.success.event';
+import { BookRepository } from '../../../book/infrastructure/book.repository';
+import { AvailableBook, Book } from '../../../book/domain/book';
 
 @EventsHandler(BookHoldSuccessEvent)
 export class BookHoldSuccessEventHandler

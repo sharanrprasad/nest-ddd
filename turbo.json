@@ -18,7 +18,8 @@
     },
     "test": {
       "outputs": ["coverage/**"],
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "cache": false
     },
     "lint": {
       "dependsOn": ["^build"]

@@ -1,7 +1,7 @@
 import { PlaceBookOnHoldCommand } from '../commands/place.book.hold.command';
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
-import { FindBookById } from 'libs/lending/src/book/models/find.book.by.id';
-import { PatronRepository } from 'libs/lending/src/patron/infrastructure/patron.repository';
+import { FindBookById } from '../../../book/models/find.book.by.id';
+import { PatronRepository } from '../../../patron/infrastructure/patron.repository';
 
 @CommandHandler(PlaceBookOnHoldCommand)
 export class PlaceBookOnHoldCommandHandler

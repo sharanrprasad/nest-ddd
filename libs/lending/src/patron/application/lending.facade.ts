@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { CommandBus } from '@nestjs/cqrs';
-import { PlaceBookOnHoldCommand } from 'libs/lending/src/patron/application/commands/place.book.hold.command';
+import { PlaceBookOnHoldCommand } from '../../patron/application/commands/place.book.hold.command';
 
 @Injectable()
 export class LendingFacade {

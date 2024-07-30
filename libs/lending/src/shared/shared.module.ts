@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { NestCqrsEvents } from 'libs/lending/src/shared/nest.cqrs.events';
+import { NestCqrsEvents } from '../shared/nest.cqrs.events';
 import { CqrsModule } from '@nestjs/cqrs';
-import { DomainEventBus } from 'libs/lending/src/shared/domain.event.bus';
+import { DomainEventBus } from '../shared/domain.event.bus';
 
 @Module({
   imports: [CqrsModule],

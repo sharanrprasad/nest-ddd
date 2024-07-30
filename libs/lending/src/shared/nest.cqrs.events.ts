@@ -1,6 +1,6 @@
-import { DomainEventBus } from 'libs/lending/src/shared/domain.event.bus';
+import { DomainEventBus } from '../shared/domain.event.bus';
 import { Injectable } from '@nestjs/common';
-import { DomainEvent } from 'libs/lending/src/shared/domain.event';
+import { DomainEvent } from '../shared/domain.event';
 import { EventBus } from '@nestjs/cqrs';
 
 @Injectable()

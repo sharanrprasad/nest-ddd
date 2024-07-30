@@ -1,5 +1,5 @@
-import { AvailableBook } from 'libs/lending/src/book/domain/book';
-import { Patron } from 'libs/lending/src/patron/domain/patron';
+import { AvailableBook } from '../../../book/domain/book';
+import { Patron } from '../../../patron/domain/patron';
 
 export class Acceptance {}
 

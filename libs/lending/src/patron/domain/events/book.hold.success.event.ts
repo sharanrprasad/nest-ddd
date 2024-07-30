@@ -1,4 +1,4 @@
-import { PatronEvent } from 'libs/lending/src/patron/domain/events/patron.event';
+import { PatronEvent } from '../../../patron/domain/events/patron.event';
 
 export class BookHoldSuccessEvent extends PatronEvent {
   constructor(

@@ -3,10 +3,10 @@ import { PatronHolds } from './value-objects/patron.holds';
 import {
   Acceptance,
   PlaceOnHoldPolicyFunction,
-} from 'libs/lending/src/patron/domain/policies/place.on.hold.policy';
-import { AvailableBook, Book } from 'libs/lending/src/book/domain/book';
-import { PatronType } from 'libs/lending/src/patron/infrastructure/models/patron.db.entity';
-import { BookHoldSuccessEvent } from 'libs/lending/src/patron/domain/events/book.hold.success.event';
+} from './policies/place.on.hold.policy';
+import { AvailableBook } from '../../book/domain/book';
+import { PatronType } from '../../patron/infrastructure/models/patron.db.entity';
+import { BookHoldSuccessEvent } from '../../patron/domain/events/book.hold.success.event';
 
 export class Patron {
   constructor(
@@ -40,5 +40,9 @@ export class Patron {
 
   isMaxHolds() {
     return this.patronHolds.isMaxHolds();
+  }
+
+  getId() {
+    return this.patronInformation.patronId;
   }
 }

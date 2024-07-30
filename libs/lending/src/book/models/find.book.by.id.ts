@@ -1,4 +1,4 @@
-import { AvailableBook } from 'libs/lending/src/book/domain/book';
+import { AvailableBook } from '../domain/book';
 
 export abstract class FindBookById {
   abstract findAvailableBookById(

@@ -6,7 +6,9 @@
     "deleteOutDir": true,
     "webpack": true,
     "tsConfigPath": "apps/library/tsconfig.app.json",
-    "plugins": ["@nestjs/swagger"]
+    "plugins": [
+      "@nestjs/swagger"
+    ]
   },
   "monorepo": true,
   "defaultLibraryPrefix": "@repo",
@@ -19,7 +21,9 @@
       "sourceRoot": "apps/library/src",
       "compilerOptions": {
         "tsConfigPath": "apps/library/tsconfig.build.json",
-        "plugins": ["@nestjs/swagger"]
+        "plugins": [
+          "@nestjs/swagger"
+        ]
       }
     },
     "lending": {
@@ -29,7 +33,18 @@
       "sourceRoot": "libs/lending/src",
       "compilerOptions": {
         "tsConfigPath": "libs/lending/tsconfig.json",
-        "plugins": ["@nestjs/swagger"]
+        "plugins": [
+          "@nestjs/swagger"
+        ]
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.build.json"
       }
     }
   }
