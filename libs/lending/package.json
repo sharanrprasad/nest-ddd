@@ -1,10 +1,10 @@
 {
-  "name": "library",
-  "version": "0.0.1",
+  "name": "@repo/lending",
+  "version": "0.0.0",
   "description": "",
   "author": "",
-  "private": true,
   "license": "UNLICENSED",
+
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
@@ -16,12 +16,13 @@
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf .turbo dist"
   },
+
   "dependencies": {
-    "@repo/jest-presets": "*",
     "@repo/utils": "*"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*"
+    "@repo/typescript-config": "*",
+    "@repo/jest-presets": "*"
   }
 }

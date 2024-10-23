@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
-import { PatronModule } from '@repo/lending';
+import { PatronModule, BookModule } from 'libs/lending/src';
+import { SharedModule } from '@repo/shared';
 
 @Module({
-  imports: [PatronModule],
+  imports: [PatronModule, BookModule, SharedModule],
 })
 export class AppModule {}

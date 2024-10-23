@@ -9,9 +9,17 @@
         "dist/**"
       ]
     },
+    "nest:build": {
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "dependsOn": ["^build"],
+      "outputs": [
+        "dist/**"
+      ]
+    },
     "test": {
       "outputs": ["coverage/**"],
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "cache": false
     },
     "lint": {
       "dependsOn": ["^build"]
@@ -26,6 +34,9 @@
     },
     "clean": {
       "cache": false
+    },
+    "//#start:library:dev:root": {
+      "dependsOn": ["^build"]
     }
   }
 }

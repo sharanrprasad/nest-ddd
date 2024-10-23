@@ -1,8 +1,10 @@
 {
-  "extends": "@repo/typescript-config/base.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "baseUrl": "./"
+    "declaration": false,
+    "outDir": "../../dist/apps/library"
   },
-  "include": ["src", "test"]
+  "include": ["src/**/*", "test/**/*"],
+  "exclude": ["node_modules", "dist", "jest.config.js"]
 }
+
